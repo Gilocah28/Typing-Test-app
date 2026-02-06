@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
+
+:root {
+  /* Neutral color */
+  --backgroundPrimary: hsl(0, 0%, 7%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --hardBlack: hsl(0, 0%, 15%);
+  --mediumBlack: hsl(240, 3%, 46%);
+  --grayColor: hsl(240, 1%, 59%);
+
+  /* Blue color */
+  --blueColor1: hsl(214, 100%, 55%);
+  --blueColor2: hsl(210, 100%, 65%);
+
+  /* green color */
+  --greenColor: hsl(140, 63%, 57%);
+
+  /* green red */
+  --redColor: hsl(354, 63%, 57%);
+
+  /* green yellow */
+  --yellowColor: hsl(49, 85%, 70%);
+
+  /* Primary font size and font-family*/
+  --primaryFrontFamily: "Sora", sans-serif;
+  --primaryFontSize: 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--primaryFrontFamily);
+  background-color: var(--backgroundPrimary);
+  color: var(--whiteColor);
+  min-height: 100vh;
+}
+.navbar {
+  border: 0.063rem solid;
+  padding: 30px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+.top-score-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+.top-score-container p {
+  color: var(--grayColor);
+}
+.top-score-container p span {
+  color: var(--whiteColor);
+}
+
+main {
+  padding: 30px 50px;
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+.info-container {
+  display: flex;
+  align-items: center;
+
+  gap: 5rem;
+  margin-bottom: 30px;
+  border-bottom: 1px solid var(--grayColor);
+}
+
+.status-container {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.status-container p {
+  color: var(--mediumBlack);
+  padding: 0 16px 0 0;
+  margin-right: 16px;
+}
+
+.status-container p span {
+  color: var(--whiteColor);
+}
+
+.status-container p:not(:last-child) {
+  border-right: 1px solid var(--grayColor);
+}
+
+.option-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
