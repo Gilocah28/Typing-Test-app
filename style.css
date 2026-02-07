@@ -172,11 +172,11 @@ main {
   align-items: center;
   background: var(--hardBlack);
   color: var(--whiteColor);
-  padding: 12px;
+  padding: 0.75rem;
   font-size: 1rem;
   outline: none;
   border: none;
-  border-radius: 12px;
+  border-radius: 0.75rem;
   font-family: var(--primaryFrontFamily);
   cursor: pointer;
   transition: transform 0.3 linear;
@@ -193,8 +193,8 @@ main {
 
 .start-container {
   cursor: pointer;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(0.5rem);
+  -webkit-backdrop-filter: blur(0.5rem);
   position: absolute;
   top: -5%;
   left: -5%;
@@ -226,46 +226,224 @@ main {
   font-size: 1rem;
   border: none;
   outline: none;
-  border-radius: 12px;
+  border-radius: 0.75rem;
   color: var(--whiteColor);
   background-color: var(--blueColor1);
   font-family: var(--primaryFrontFamily);
   font-weight: 600;
-  border: 1.5px solid var(--backgroundPrimary);
-  box-shadow: 0px 0px 0px 2px hsl(214, 100%, 55%);
+  border: 1px solid var(--backgroundPrimary);
+  box-shadow: 0px 0px 0px 0.1rem hsl(214, 100%, 55%);
   cursor: pointer;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .start-container button:hover {
   border: 0;
   box-shadow: none;
-  border: 1.5px solid var(--blueColor2);
+  border: 1px solid var(--blueColor2);
   background-color: var(--blueColor2);
 }
 
-.start-container p{
+.start-container p {
   font-size: 1.2rem;
+  letter-spacing: 0.063rem;
+}
+
+.test-completed {
+  padding: 1.875rem 3.125rem;
+  margin: 0 auto;
+  max-width: 90rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.test-con-one {
+  flex: 1;
+  padding-top: 3.75rem;
+}
+
+.test-con-last {
+  flex: 1;
+  align-content: end;
+  text-align: right;
+  padding-bottom: 3.75rem;
+}
+
+.test-con {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.test-message img {
+  margin-bottom: 1rem;
+}
+
+.test-message h1 {
+  font-weight: 500;
   letter-spacing: 1px;
+}
+
+.test-message p {
+  font-weight: normal;
+  font-size: 16px;
+  margin: 1rem 0;
+  color: var(--grayColor);
+}
+
+.test-result-container {
+  display: flex;
+  gap: 2rem;
+  text-align: left;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+  width: 70%;
+  justify-content: space-evenly;
+}
+
+.result-container {
+  border: 1px solid var(--mediumBlack);
+  padding: 1rem;
+  width: 130px;
+  border-radius: 6px;
+}
+
+.test-accuracy,
+.test-character,
+.test-wmp {
+  font-weight: 600;
+}
+
+.wmp,
+.acc,
+.char {
+  color: var(--grayColor);
+  margin-bottom: 5px;
+}
+
+.test-accuracy {
+  color: var(--redColor);
+}
+
+.test-character {
+  color: var(--greenColor);
+}
+
+.test-character .mistake {
+  color: var(--redColor);
+}
+
+.test-btn-container button {
+  background: var(--whiteColor);
+  padding: 0.8rem;
+  display: flex;
+  align-items: center;
+  color: var(--backgroundPrimary);
+  font-family: var(--primaryFrontFamily);
+  font-weight: 600;
+
+  border: none;
+  outline: none;
+  border-radius: 8px;
+
+  font-size: 1rem;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.test-btn-container button img {
+  margin-left: 8px;
+  width: 15px;
+  filter: brightness(0%);
+}
+
+.test-btn-container button:hover {
+  opacity: 0.8;
 }
 
 
 
+.high-score-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.score-info-container {
+  margin-bottom: 2.5rem;
+}
+
+.score-info-container h1 {
+  margin: 1rem 0;
+  letter-spacing: 1px;
+  color: var(--whiteColor);
+}
+
+.score-info-container p {
+  color: var(--grayColor);
+}
+
+.score-new-best {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-container button {
+  font-family: var(--primaryFrontFamily);
+  background-color: var(--whiteColor);
+  padding: 0.8rem;
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  color: var(--backgroundPrimary);
+  font-weight: 600;
+  border: none;
+  outline: none;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-container button:hover {
+  opacity: 0.8;
+}
+
+.btn-container button img {
+  width: 16px;
+  margin-left: 8px;
+  filter: brightness(0%);
+  
+}
+
+.img-container-highscore{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -999999;
+}
+
+.img-container-highscore img{
+  width: 100%;
+  background-size: cover;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-.display-none{
+.display-none {
   display: none;
 }

@@ -21,7 +21,7 @@
       </div>
     </nav>
 
-    <main class="display-none">
+    <main class="">
       <div class="info-container">
         <div class="status-container">
           <p>WPM: <span class="wmp">40</span></p>
@@ -32,9 +32,9 @@
         <div class="option-container">
           <div class="difficulty-container">
             <h4>Difficulty:</h4>
-            <button>Easy</button>
-            <button>Medium</button>
-            <button>Hard</button>
+            <button data-difficulty="easy">Easy</button>
+            <button data-difficulty="medium">Medium</button>
+            <button data-difficulty="hard">Hard</button>
           </div>
           <div class="mode-container">
             <h4>Mode:</h4>
@@ -46,18 +46,10 @@
 
       <div class="main-text">
         <p class="text">
-          The archaeological expedition unearthed artifacts that complicated
-          prevailing theories about Bronze Age trade networks. Obsidian from
-          Anatolia, lapis lazuli from Afghanistan, and amber from the Baltic—all
-          discovered in a single Mycenaean tomb—suggested commercial connections
-          far more extensive than previously hypothesized. "We've underestimated
-          ancient peoples' navigational capabilities and their appetite for
-          luxury goods," the lead researcher observed. "Globalization isn't as
-          modern as we assume.
         </p>
 
         <!-- Later i will add start container here -->
-        <div class="start-container">
+        <div class="start-container display-none">
           <button id="start">Start Typing Test</button>
           <p>Or click the text and start typing</p>
         </div>
@@ -70,5 +62,84 @@
         </button>
       </div>
     </main>
+
+    <section class="test-completed display-none">
+      <div class="test-container test-con-one">
+        <img src="./assets/images/pattern-star-2.svg" alt="star-2" />
+      </div>
+
+      <div class="test-container test-con">
+        <div class="test-message">
+          <img src="./assets/images/icon-completed.svg" alt="check" />
+          <h1>Test Complete!</h1>
+          <p>Solid run. keep pushing to beat your hight score</p>
+        </div>
+
+        <div class="test-result-container">
+          <div class="result-container">
+            <p class="wmp">WMP:</p>
+            <p class="test-wmp">85</p>
+          </div>
+          <div class="result-container">
+            <p class="acc">Accuracy:</p>
+            <p class="test-accuracy">90%</p>
+          </div>
+          <div class="result-container">
+            <p class="char">Character:</p>
+            <p class="test-character">120/<span class="mistake">5</span></p>
+          </div>
+        </div>
+
+        <div class="test-btn-container">
+          <button>
+            Go Again
+            <img src="./assets/images/icon-restart.svg" alt="restart" />
+          </button>
+        </div>
+      </div>
+
+      <div class="test-container test-con-last">
+        <img src="./assets/images/pattern-star-1.svg" alt="star-1" />
+      </div>
+    </section>
+
+    <section class="high-score-container display-none">
+      <div class="high-score-info">
+        <div class="score-info-container">
+          <img src="./assets/images/icon-new-pb.svg" alt="winner" />
+          <h1>High Score Smashed!</h1>
+          <p>You're getting faster. That was incredible typing</p>
+        </div>
+
+        <div class="score-new-best">
+          <div class="result-container">
+            <p class="wmp">WMP:</p>
+            <p class="test-wmp">85</p>
+          </div>
+          <div class="result-container">
+            <p class="acc">Accuracy:</p>
+            <p class="test-accuracy">90%</p>
+          </div>
+          <div class="result-container">
+            <p class="char">Character:</p>
+            <p class="test-character">120/<span class="mistake">5</span></p>
+          </div>
+        </div>
+
+        <div class="btn-container">
+          <button>
+            Beat This Score
+            <img src="./assets/images/icon-restart.svg" alt="restart" />
+          </button>
+        </div>
+      </div>
+
+      <div class="img-container-highscore">
+        <img src="./assets/images/pattern-confetti.svg" alt="confetti" />
+      </div>
+    </section>
+
+    <script src="./character.js"></script>
+    <script src="./app.js"></script>
   </body>
 </html>
