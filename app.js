@@ -24,7 +24,7 @@ const btnBeatHighScore = document.querySelector(".btn-beat-high-score");
 const btnAgain = document.querySelector(".again");
 const startBtn = document.getElementById("start");
 
-let difficulty = "easy";
+let difficulty = "medium";
 let charIndex = 0;
 let totalChar = 0;
 let totalMistake = 0;
