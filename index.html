@@ -17,16 +17,17 @@
       <img src="./assets/images/logo-large.svg" alt="Logo" />
       <div class="top-score-container">
         <img src="./assets/images/icon-personal-best.svg" alt="Trophy" />
-        <p>Personal Best: <span class="best-score">92 WPM</span></p>
+        <p>Personal Best: <span class="best-score">0 WPM</span></p>
       </div>
     </nav>
 
-    <main class="">
+    <main class="main-container">
+      <input type="text" id="input-text" autocomplete="off" />
       <div class="info-container">
         <div class="status-container">
-          <p>WPM: <span class="wmp">40</span></p>
-          <p>Acurracy: <span class="Acurracy">94%</span></p>
-          <p>Time: <span class="time">0:04</span></p>
+          <p>WPM: <span class="wmp">0</span></p>
+          <p>Acurracy: <span class="acurracy">0%</span></p>
+          <p>Time: <span class="time">00:60</span></p>
         </div>
 
         <div class="option-container">
@@ -39,17 +40,16 @@
           <div class="mode-container">
             <h4>Mode:</h4>
             <button>Timed (60s)</button>
-            <button>Medium</button>
+            <button>Pasaged</button>
           </div>
         </div>
       </div>
 
       <div class="main-text">
-        <p class="text">
-        </p>
+        <p class="text"></p>
 
         <!-- Later i will add start container here -->
-        <div class="start-container display-none">
+        <div class="start-container">
           <button id="start">Start Typing Test</button>
           <p>Or click the text and start typing</p>
         </div>
@@ -86,12 +86,12 @@
           </div>
           <div class="result-container">
             <p class="char">Character:</p>
-            <p class="test-character">120/<span class="mistake">5</span></p>
+            <p class="test-character">0/<span class="mistake">0</span></p>
           </div>
         </div>
 
         <div class="test-btn-container">
-          <button>
+          <button class="again">
             Go Again
             <img src="./assets/images/icon-restart.svg" alt="restart" />
           </button>
@@ -114,20 +114,22 @@
         <div class="score-new-best">
           <div class="result-container">
             <p class="wmp">WMP:</p>
-            <p class="test-wmp">85</p>
+            <p class="test-wmp" id="bestWpm">0</p>
           </div>
           <div class="result-container">
             <p class="acc">Accuracy:</p>
-            <p class="test-accuracy">90%</p>
+            <p class="test-accuracy" id="bestAccuraccy">0%</p>
           </div>
           <div class="result-container">
             <p class="char">Character:</p>
-            <p class="test-character">120/<span class="mistake">5</span></p>
+            <p class="test-character" id="totalCharBest">
+              120/<span class="mistake" id="totalMistakeBest">5</span>
+            </p>
           </div>
         </div>
 
         <div class="btn-container">
-          <button>
+          <button class="btn-beat-high-score">
             Beat This Score
             <img src="./assets/images/icon-restart.svg" alt="restart" />
           </button>
